@@ -37,15 +37,16 @@ function start() { // Inicio da função start()
     moveinimigo1();
     moveinimigo2();
     moveamigo();
+    colisao();
 	} // Fim da função loop()
 
     //Função que movimenta o fundo do jogo	
-function movefundo() {
+    function movefundo() {
 	esquerda = parseInt($("#fundoGame").css("background-position"));
 	$("#fundoGame").css("background-position",esquerda-2);
-} // fim da função movefundo()
+    } // fim da função movefundo()
 
-function movejogador() {
+    function movejogador() {
 	
 	if (jogo.pressionou[TECLA.C]) {
 		var topo = parseInt($("#jogador").css("top"));
@@ -147,4 +148,12 @@ function movejogador() {
                        }
         } // Fecha executaDisparo()
     } // Fecha disparo()
+
+    function colisao() {
+        var colisao1 = ($("#jogador").collision($("#inimigo1")));
+        // jogador com o inimigo1
+    
+        console.log(colisao1);
+    
+    } //Fim da função colisao()
 } // Fim da função start
