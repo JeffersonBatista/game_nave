@@ -12,9 +12,9 @@ function start() { // Inicio da função start()
     var velocidade=5;
     var posicaoY = parseInt(Math.random() * 334);
     var TECLA ={
-        W: 87,
-	    S: 83,
-	    D: 68
+        C: 38,
+	    B: 40,
+	    D: 32
     }
         jogo.pressionou = [];
 
@@ -29,15 +29,15 @@ function start() { // Inicio da função start()
     
 	//Game Loop
 	jogo.timer = setInterval(loop,30);
-	function loop() {
+    function loop() {
 
 	movefundo();
     movejogador();
     moveinimigo1();
+    moveinimigo2();
 	} // Fim da função loop()
-} // Fim da função start
 
-//Função que movimenta o fundo do jogo	
+    //Função que movimenta o fundo do jogo	
 function movefundo() {
 	esquerda = parseInt($("#fundoGame").css("background-position"));
 	$("#fundoGame").css("background-position",esquerda-2);
@@ -45,7 +45,7 @@ function movefundo() {
 
 function movejogador() {
 	
-	if (jogo.pressionou[TECLA.W]) {
+	if (jogo.pressionou[TECLA.C]) {
 		var topo = parseInt($("#jogador").css("top"));
 		$("#jogador").css("top",topo-10);
 
@@ -56,7 +56,7 @@ function movejogador() {
 	
 	}
 	
-	if (jogo.pressionou[TECLA.S]) {
+	if (jogo.pressionou[TECLA.B]) {
 		
 		var topo = parseInt($("#jogador").css("top"));
 		$("#jogador").css("top",topo+10);	
@@ -88,4 +88,15 @@ function movejogador() {
                 
             }
     } //Fim da função moveinimigo1()
-    
+
+    function moveinimigo2() {
+        posicaoX = parseInt($("#inimigo2").css("left"));
+	$("#inimigo2").css("left",posicaoX-3);
+				
+		if (posicaoX<=0) {
+			
+		$("#inimigo2").css("left",775);
+					
+		}
+} // Fim da função moveinimigo2()
+} // Fim da função start
