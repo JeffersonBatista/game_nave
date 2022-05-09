@@ -9,7 +9,7 @@ function start() { // Inicio da função start()
 
     //Principais variáveis do jogo
 	var jogo = {}
-    var TECLA = {
+    var TECLA ={
         W: 87,
 	    S: 83,
 	    D: 68
@@ -21,7 +21,6 @@ function start() { // Inicio da função start()
         jogo.pressionou[e.which] = true;
         });
     
-    
         $(document).keyup(function(e){
            jogo.pressionou[e.which] = false;
         });
@@ -29,6 +28,7 @@ function start() { // Inicio da função start()
 	//Game Loop
 	jogo.timer = setInterval(loop,30);
 	function loop() {
+
 	movefundo();
     movejogador();
 	} // Fim da função loop()
@@ -45,27 +45,29 @@ function movejogador() {
 	if (jogo.pressionou[TECLA.W]) {
 		var topo = parseInt($("#jogador").css("top"));
 		$("#jogador").css("top",topo-10);
-        
-        if (topo<=0) {
+
+		if (topo<=0) {
 		
-            $("#jogador").css("top",topo+10);
+	    $("#jogador").css("top",topo+10);
         }
+	
 	}
 	
 	if (jogo.pressionou[TECLA.S]) {
 		
 		var topo = parseInt($("#jogador").css("top"));
-		$("#jogador").css("top",topo+10);
-        
-        if (topo>=435) {	
-            $("#jogador").css("top",topo-10);
-                
-        }
+		$("#jogador").css("top",topo+10);	
+
+		if (topo>=435) {	
+	    $("#jogador").css("top",topo-10);
+		}
+
 	}
 	
 	if (jogo.pressionou[TECLA.D]) {
 		
 		//Chama função Disparo	
+		disparo();
 	}
 
 	} // fim da função movejogador()
