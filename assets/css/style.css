@@ -79,7 +79,7 @@ body {
 }
 
 .anima1 {
-	background-image:url(../imgs/helicoptero.png);
+	background-image:url(/assets/imgs/helicoptero.png);
 	animation:play .5s steps(2) infinite;
 
        -webkit-animation: play .5s steps(2) infinite;
@@ -115,7 +115,7 @@ body {
 }
 
 .anima2 {
-    background-image:url(../imgs/inimigo1.png);
+    background-image:url(/assets/imgs/inimigo1.png);
     animation: play .5s steps(2) infinite;
     -webkit-animation: play .5s steps(2) infinite;
     -moz-animation: play .5s steps(2) infinite;
@@ -125,7 +125,7 @@ body {
 
 
 .anima3 {
-	background-image:url(../imgs/amigo.png);
+	background-image:url(/assets/imgs/amigo.png);
 	animation:play2 .9s steps(12) infinite;
 	-webkit-animation: play2 .9s steps(12) infinite;
     -moz-animation: play2 .9s steps(12) infinite;
