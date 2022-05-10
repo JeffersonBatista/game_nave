@@ -358,6 +358,7 @@ function start() { // Inicio da função start()
             $("#energia").css("background-image", "url(assets/imgs/energia0.png)");
         
         //Game Over
+        gameOver();
         }
 
     } // Fim da função energia()
