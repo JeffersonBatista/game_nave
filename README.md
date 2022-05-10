@@ -1,2 +1,2 @@
-# game_nave
-game de nave, para o basecamp DIO + Orbi Games
+# game_combat
+Helicóptero de combate, para o basecamp DIO + Orbi Games
